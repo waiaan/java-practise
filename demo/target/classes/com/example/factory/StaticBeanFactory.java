@@ -5,6 +5,6 @@ import com.example.service.impl.EmployeeServiceImpl;
 
 public class StaticBeanFactory {
   public static EmployeeService get() {
-    return new EmployeeServiceImpl();
+    return null;
   }
 }

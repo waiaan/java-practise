@@ -7,7 +7,17 @@
   </bean> -->
 
   <!-- <bean id="employeeDao" class="com.example.dao.impl.EmployeeDaoImpl"></bean> -->
-  <bean id="beanFactory" class="com.example.factory.BeanFactory"></bean>
+  <!-- <bean id="beanFactory" class="com.example.factory.BeanFactory"></bean> -->
   <!-- <bean id="employeeService" factory-bean="beanFactory" factory-method="get"></bean> -->
-  <bean id="employeeService" class="com.example.service.impl.EmployeeServiceImpl" init-method="init" destroy-method="destroy"></bean>
+  <!-- <bean id="employeeService" class="com.example.service.impl.EmployeeServiceImpl">
+    <constructor-arg value="tom" name="name"></constructor-arg>
+    <constructor-arg value="35" name="age"></constructor-arg>
+    <constructor-arg name="birth" ref="now"></constructor-arg>
+  </bean>
+  <bean id="now" class="java.util.Date"></bean> -->
+  <bean id="employeeService" class="com.example.service.impl.EmployeeServiceImpl">
+    <property value="tom" name="name"></property>
+    <property value="35" name="age"></property>
+    <property name="birth" ref="now"></property>
+  </bean>
 </beans>

@@ -1,30 +1,54 @@
 package com.example.service.impl;
 
+import java.util.Date;
+
 import com.example.dao.EmployeeDao;
 import com.example.service.EmployeeService;
 
 public class EmployeeServiceImpl implements EmployeeService {
+  private String name;
+  private Integer age;
+  private Date birth;
 
-  private EmployeeDao ed;
+  public EmployeeServiceImpl(String name, Integer age, Date birth) {
+    this.name = name;
+    this.age = age;
+    this.birth = birth;
+  }
 
-  private int i = 10;
+  @Override
+  public String toString() {
+    return "EmployeeServiceImpl [age=" + age + ", birth=" + birth + ", name=" + name + "]";
+  }
 
   @Override
   public void get() {
-    // ed.get();
-    System.out.println("service get method");
+    // TODO Auto-generated method stub
+
   }
 
-  public void setEd(EmployeeDao ed) {
-    this.ed = ed;
+  public String getName() {
+    return name;
   }
 
-  public void init() {
-    System.out.println("service init method");
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public void destroy() {
-    System.out.println("service destroy method");
+  public Integer getAge() {
+    return age;
+  }
+
+  public void setAge(Integer age) {
+    this.age = age;
+  }
+
+  public Date getBirth() {
+    return birth;
+  }
+
+  public void setBirth(Date birth) {
+    this.birth = birth;
   }
 
 }
