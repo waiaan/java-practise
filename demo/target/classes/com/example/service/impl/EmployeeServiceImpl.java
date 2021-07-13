@@ -1,12 +1,11 @@
 package com.example.service.impl;
 
 import com.example.dao.EmployeeDao;
-import com.example.dao.impl.EmployeeDaoImpl;
 import com.example.service.EmployeeService;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
-  private EmployeeDao ed = new EmployeeDaoImpl();
+  private EmployeeDao ed;
 
   private int i = 0;
 
