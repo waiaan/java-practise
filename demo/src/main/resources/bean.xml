@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
 
-  <!-- <bean id="employeeService" class="com.example.service.impl.EmployeeServiceImpl">
-    <property name="ed" ref="employeeDao"></property>
-  </bean> -->
+  <context:component-scan base-package="com.example"></context:component-scan>
 
-  <!-- <bean id="employeeDao" class="com.example.dao.impl.EmployeeDaoImpl"></bean> -->
-  <!-- <bean id="beanFactory" class="com.example.factory.BeanFactory"></bean> -->
-  <!-- <bean id="employeeService" factory-bean="beanFactory" factory-method="get"></bean> -->
-  <!-- <bean id="employeeService" class="com.example.service.impl.EmployeeServiceImpl">
-    <constructor-arg value="tom" name="name"></constructor-arg>
-    <constructor-arg value="35" name="age"></constructor-arg>
-    <constructor-arg name="birth" ref="now"></constructor-arg>
-  </bean>
-  <bean id="now" class="java.util.Date"></bean> -->
-  <bean id="employeeService" class="com.example.service.impl.EmployeeServiceImpl">
-    <property value="tom" name="name"></property>
-    <property value="35" name="age"></property>
-    <property name="birth" ref="now"></property>
-  </bean>
 </beans>
