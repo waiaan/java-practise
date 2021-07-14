@@ -40,4 +40,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     employeeDao.deleteOneById(id);
   }
 
+  @Override
+  public void transfer(Integer from, Integer to, Double amount) {
+
+  }
+
 }

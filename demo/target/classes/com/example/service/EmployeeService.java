@@ -14,4 +14,6 @@ public interface EmployeeService {
   void updateOne(Employee emp);
 
   void deleteOneById(Integer id);
+
+  void transfer(Integer from, Integer to, Double amount);
 }
