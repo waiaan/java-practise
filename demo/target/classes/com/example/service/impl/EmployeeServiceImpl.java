@@ -1,23 +1,43 @@
 package com.example.service.impl;
 
+import java.util.List;
+
 import com.example.dao.EmployeeDao;
+import com.example.domain.Employee;
 import com.example.service.EmployeeService;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {
 
-  private EmployeeDao ed;
+  @Autowired
+  private EmployeeDao employeeDao;
 
   @Override
-  public void get() {
-    System.out.println("service impl get method");
-    ed.get();
+  public List<Employee> findAll() {
+    return employeeDao.findAll();
   }
 
-  public EmployeeServiceImpl() {
-    System.out.println("service impl constructor");
+  @Override
+  public Employee findOneById(Integer id) {
+    return employeeDao.findOneById(id);
+  }
+
+  @Override
+  public void saveOne(Employee emp) {
+    employeeDao.saveOne(emp);
+  }
+
+  @Override
+  public void updateOne(Employee emp) {
+    employeeDao.updateOne(emp);
+  }
+
+  @Override
+  public void deleteOneById(Integer id) {
+    employeeDao.deleteOneById(id);
   }
 
 }

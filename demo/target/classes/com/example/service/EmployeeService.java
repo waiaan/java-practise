@@ -1,5 +1,17 @@
 package com.example.service;
 
+import java.util.List;
+
+import com.example.domain.Employee;
+
 public interface EmployeeService {
-  public void get();
+  List<Employee> findAll();
+
+  Employee findOneById(Integer id);
+
+  void saveOne(Employee emp);
+
+  void updateOne(Employee emp);
+
+  void deleteOneById(Integer id);
 }
