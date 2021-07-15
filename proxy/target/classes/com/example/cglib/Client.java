@@ -12,7 +12,7 @@ public class Client {
 
       @Override
       public Object intercept(Object proxy, Method method, Object[] args, MethodProxy proxyMethod) throws Throwable {
-
+        float money = (float) args[0];
         return method.invoke(proxy, args);
       }
 
