@@ -77,8 +77,8 @@ public class EmployeeDaoImpl implements EmployeeDao {
     try {
       List<Employee> emps = runner.query(connectionUtils.getThreadConnection(),
           "select * from employees where first_name=?", new BeanListHandler<Employee>(Employee.class), name);
-      if (emps.size() > 1) {
-        throw new RuntimeException(name + " is more than 1");
+      if (emps.size() != 1) {
+        throw new RuntimeException(name + " is more than 1 or not found");
       } else {
         return emps.get(0);
       }
