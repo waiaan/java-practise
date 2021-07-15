@@ -14,4 +14,6 @@ public interface EmployeeDao {
   void updateOne(Employee emp);
 
   void deleteOneById(Integer id);
+
+  Employee findOneByName(String name);
 }

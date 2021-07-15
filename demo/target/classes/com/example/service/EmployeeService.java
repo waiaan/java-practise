@@ -15,5 +15,5 @@ public interface EmployeeService {
 
   void deleteOneById(Integer id);
 
-  void transfer(Integer from, Integer to, Double amount);
+  void transfer(String from, String to, Double amount);
 }
