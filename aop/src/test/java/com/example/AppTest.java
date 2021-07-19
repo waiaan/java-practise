@@ -10,15 +10,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Unit test for simple App.
  */
 public class AppTest {
+
     /**
      * Rigorous Test :-)
      */
     @Test
     public void shouldAnswerWithTrue() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-        EmployeeService es = (EmployeeService) ac.getBean("employeeService");
-        es.delete(100);
+        EmployeeService es = (EmployeeService) ac.getBean("employeeServiceImpl");
         es.save();
-        es.update(10);
     }
 }
