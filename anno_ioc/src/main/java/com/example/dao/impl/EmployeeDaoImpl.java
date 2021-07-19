@@ -4,7 +4,7 @@ import com.example.dao.EmployeeDao;
 
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository("ddd")
 public class EmployeeDaoImpl implements EmployeeDao {
 
   @Override
