@@ -1,15 +1,29 @@
 package com.example.dao.impl;
 
-import com.example.dao.EmployeeDao;
+import java.util.List;
 
+import com.example.dao.EmployeeDao;
+import com.example.domain.Employee;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-@Repository("ddd")
+@Repository
 public class EmployeeDaoImpl implements EmployeeDao {
 
+  @Autowired
+  private QueryRunner runner;
+
   @Override
-  public void save() {
-    System.out.println("dao-save");
+  public List<Employee> findAll() {
+    System.out.println(runner);
+    return null;
+  }
+
+  @Override
+  public Employee findById(int id) {
+    return null;
   }
 
 }
