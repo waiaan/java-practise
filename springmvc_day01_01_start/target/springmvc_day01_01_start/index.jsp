@@ -10,7 +10,7 @@
 
 <body>
     <h3>QUICK START</h3>
-    <a href="./hello">introduction</a>
+    <a href="./user/hello">introduction</a>
 </body>
 
 </html>

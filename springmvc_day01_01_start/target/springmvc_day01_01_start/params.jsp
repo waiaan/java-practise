@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <h3>QUICK START</h3>
-    <a href="./params">introduction</a>
+
 </body>
 
 </html>
