@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <form action="./saveAccount" method="post">
+        <form action="./user" method="post">
             <!-- <label for="name">名称</label>
             <input type="text" id="name" name='name'>
             <label for="password">密码</label>

@@ -11,7 +11,7 @@
 
     <body>
         <h3>QUICK START</h3>
-        <a href="./params">introduction</a>
+        <a href="./params?user=aaa">introduction</a>
     </body>
 
     </html>
