@@ -27,8 +27,8 @@
             <input type="text" id="accountId" name="id">
             <label for="amount">账户金额</label>
             <input type="text" id="amount" name="amount">
-            <label for="date">日期</label>
-            <input type="text" id="date" name="date">
+            <!-- <label for="date">日期</label>
+            <input type="text" id="date" name="date"> -->
             <input type="submit" value="提交">
         </form>
     </body>
