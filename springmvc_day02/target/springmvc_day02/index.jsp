@@ -8,7 +8,16 @@
         <script src="./js/jquery-3.6.0.js"></script>
         <script>
             $('#testJson').click(() => {
-                console.log(111);
+                $.ajax({
+                    url: './user/testString',
+                    method: 'post',
+                    contentType: 'application/json;charset=utf-8',
+                    data: '{ "username": "Tom", "age": 41,"password":445566 }',
+                    dataType: 'json',
+                    success(res) {
+                        console.log(res)
+                    }
+                })
             })
         </script>
     </body>
