@@ -19,7 +19,11 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**/test/**"></mvc:mapping>
-            <bean class="com.example.interceptor.MyInterceptor"></bean>
+            <bean class="com.example.interceptor.MyInterceptor1"></bean>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**/test/**"></mvc:mapping>
+            <bean class="com.example.interceptor.MyInterceptor2"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
 
