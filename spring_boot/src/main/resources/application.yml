@@ -1,0 +1,6 @@
+person:
+  name: Tom
+  boss: true
+  birth: 2019/01/21
+  age: 18
+  interests: [basketball, football, movie]
