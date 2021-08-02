@@ -2,6 +2,7 @@ package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * Hello world!
@@ -10,6 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class App {
     public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
+        ConfigurableApplicationContext cac = SpringApplication.run(App.class, args);
+        String[] names = cac.getBeanDefinitionNames();
+        for (String name : names) {
+            System.out.println(name);
+        }
     }
 }
