@@ -7,7 +7,9 @@ import com.example.domain.User;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -47,9 +49,11 @@ public class UserController {
     // }
 
     @RequestMapping("/testString")
-    public ModelAndView testString() throws Exception {
+    public @ResponseBody User testString(@RequestBody User user) throws Exception {
         System.out.println("test json");
-
-        return null;
+        System.out.println(user);
+        user.setAge(36);
+        user.setUsername("Jack");
+        return user;
     }
 }
