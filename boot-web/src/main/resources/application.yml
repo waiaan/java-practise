@@ -1,9 +1,15 @@
 server:
   port: 8482
+# spring:
+#   mvc:
+#     static-path-pattern: /res/**
+# web:
+#   resources:
+#     static-locations:
+#       - classpath:/haha
+
 spring:
-  #   mvc:
-  #     static-path-pattern: /res/**
-  web:
-    resources:
-      static-locations:
-        - classpath:/haha
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB

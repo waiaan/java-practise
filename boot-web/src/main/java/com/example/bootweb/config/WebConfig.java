@@ -1,13 +1,13 @@
 package com.example.bootweb.config;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.filter.HiddenHttpMethodFilter;
+import com.example.bootweb.interceptor.LoginInterceptor;
 
-@Configuration(proxyBeanMethods = false)
-public class WebConfig {
-    public HiddenHttpMethodFilter hiddenHttpMethodFilter() {
-        HiddenHttpMethodFilter m = new HiddenHttpMethodFilter();
-        m.setMethodParam("_m");
-        return m;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addInterceptors(org.springframework.web.servlet.config.annotation.InterceptorRegistry registry) {
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/");
     }
 }
