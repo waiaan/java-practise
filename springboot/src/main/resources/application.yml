@@ -1,0 +1,16 @@
+server:
+  port: 8481
+
+person:
+  name: zhangsan
+  age: 20
+
+name: lisi
+
+books:
+  - Java
+  - Javascript
+
+msg1: 'hello \n world'
+
+msg2: "hello \n world"

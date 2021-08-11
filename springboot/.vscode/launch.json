@@ -2,11 +2,11 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Spring Boot-App<springboot>",
+      "name": "Spring Boot-SpringbootApplication<springboot>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "console": "internalConsole",
-      "mainClass": "com.example.App",
+      "mainClass": "com.example.springboot.SpringbootApplication",
       "projectName": "springboot",
       "args": ""
     }
