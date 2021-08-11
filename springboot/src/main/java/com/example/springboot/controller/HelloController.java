@@ -1,9 +1,9 @@
 package com.example.springboot.controller;
 
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +16,7 @@ public class HelloController {
     class Person {
         private String name;
         private Integer age;
+        private String[] books;
 
         public String getName() {
             return name;
@@ -35,7 +36,15 @@ public class HelloController {
 
         @Override
         public String toString() {
-            return "Person [age=" + age + ", name=" + name + "]";
+            return "Person [age=" + age + ", books=" + Arrays.toString(books) + ", name=" + name + "]";
+        }
+
+        public String[] getBooks() {
+            return books;
+        }
+
+        public void setBooks(String[] books) {
+            this.books = books;
         }
     }
 

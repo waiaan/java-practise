@@ -4,6 +4,9 @@ server:
 person:
   name: zhangsan
   age: 20
+  books:
+    - Java
+    - Javascript
 
 name: lisi
 
