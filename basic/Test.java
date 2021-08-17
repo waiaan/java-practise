@@ -1,20 +1,15 @@
 
-class Grand {
-    public void show() {
-        System.out.println("grand show");
+class Test1 {
+    static void eat(Animal a) {
+        a.eat();
+        a.sleep();
     }
-}
-
-class Father extends Grand {
-
-}
-
-class Son extends Father {
-
 }
 
 public class Test {
     public static void main(String[] args) {
-        new Son().show();
+        Cat a = new Cat();
+        Cat c = (Cat) a;
+        Test1.eat(c);
     }
 }
